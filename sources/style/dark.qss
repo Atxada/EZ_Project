@@ -1,0 +1,50 @@
+QComboBox {
+    combobox-popup: 0;
+}
+    ::item:selected{
+            color: black;
+            background-color: lightgray;
+        }
+
+
+QTabWidget::pane#assetDetailTab{border-right: 1px solid #505050}
+
+QTabBar::tab#assetBrowserTab{background: #707070;
+                            border-top-left-radius: 4px;
+                            border-bottom-left-radius: 4px;
+                            margin-top:1px;
+                            margin-bottom:1px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            padding-left: 5px;
+                            padding-right: 3px;}
+        ::tab:!selected#assetBrowserTab{background: #4d4d4d;
+                                       margin-left: 3px}
+
+QStackedWidget {background: #1e1e1e}
+QRadioButton::indicator::unchecked{
+                        background-color: white;
+                        border-radius: 7px;
+                        }
+            ::indicator::checked{
+                        border: 3px solid; 
+                        border-color: white;
+                        border-radius: 7px;
+                        }
+QFrame { color: grey }
+
+QLabel { color: white}
+
+QLineEdit { selection-background-color: #ededed;
+            selection-color: black;}
+            
+QPlainTextEdit { selection-background-color: #ededed;
+                 selection-color: black;
+                 color: white;}
+
+QMenuBar::item:selected {background-color: red;}
+
+QMenu::item:selected{
+            color: black;
+            background-color: lightgray;
+        }
