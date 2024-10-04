@@ -282,7 +282,7 @@ class EZMToolbar(QtWidgets.QWidget):
         scroll.sort_asset(event)
         self.onModified()   # for saving the configuration
 
-    def new_project(self, event):
+    def new_project(self, event=None):
         self.project_window = EZMProjectWindow(app=self)
         self.project_window.show()
 

@@ -91,7 +91,6 @@ class EZMAssetBrowser(QtWidgets.QWidget):
     def initUI(self):
         # widgets for each tab
         self.main_layout = QtWidgets.QHBoxLayout(self)
-        self.main_layout.setContentsMargins(0,0,0,0)
 
         # asset scroll UI
         self.asset_scroll = EZMAssetScroll(self.app, self.manager, self)

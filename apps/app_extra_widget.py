@@ -234,7 +234,7 @@ class EZMProjectWindow(QtWidgets.QDialog):
         category = self.project_btn_grp.checkedButton().text()
 
         # checking path...
-        path = os.path.normpath(self.project_dir_field.text())  # norm path to make consistent string directory format 
+        path = self.project_dir_field.text()
         if not os.path.isdir(path):
             self.project_dir_error.setText("Directory not found!")
             self.project_dir_error.show()
@@ -251,8 +251,6 @@ class EZMProjectWindow(QtWidgets.QDialog):
             self.project_dir_error.setText("Same path already used by another project!")
             self.project_dir_error.show()
             error = 1
-        else:
-            self.project_dir_error.hide()
 
         # checking thumbnail...
         thumbnail = self.thumbnail_field.text()
@@ -291,6 +289,64 @@ class EZMProjectWindow(QtWidgets.QDialog):
             self.app.create_project(name, category, thumbnail, generated_json_path) # create project data json in root folder
 
         self.hide()
+
+class EZMGetStarted(QtWidgets.QDialog):
+    def __init__(self, browser):
+        super().__init__(browser)
+        self.browser = browser
+        self.setWindowTitle("Get Started")
+        self.setModal(True)
+
+        self.initUI()
+
+    def initUI(self):
+        self.main_layout = QtWidgets.QHBoxLayout(self)
+        self.left_layout = QtWidgets.QVBoxLayout()
+        self.right_layout = QtWidgets.QVBoxLayout()
+        self.center_layout = QtWidgets.QVBoxLayout()
+
+        self.create_img_lbl = custom_widget.GraphicLabel(get_path('create_project.png',icon=True),(256,256))
+        self.create_project_btn = QtWidgets.QPushButton('Create New Project')
+        self.create_project_btn.clicked.connect(self.create_project)
+
+        self.import_img_lbl = custom_widget.GraphicLabel(get_path('import_project.png',icon=True),(256,256))
+        self.import_project_btn = QtWidgets.QPushButton('Import Project')
+        self.import_project_btn.clicked.connect(self.import_project)
+
+        self.separator1 = QtWidgets.QFrame()
+        self.separator1.setFrameShape(QtWidgets.QFrame.VLine)
+        self.separator1.setSizePolicy(QtWidgets.QSizePolicy.Minimum,QtWidgets.QSizePolicy.Minimum)
+        self.separator1.setLineWidth(2)
+
+        self.center_lbl = QtWidgets.QLabel('OR')
+        self.center_lbl.setSizePolicy(QtWidgets.QSizePolicy.Minimum,QtWidgets.QSizePolicy.Fixed)
+
+        self.separator2 = QtWidgets.QFrame()
+        self.separator2.setFrameShape(QtWidgets.QFrame.VLine)
+        self.separator2.setSizePolicy(QtWidgets.QSizePolicy.Minimum,QtWidgets.QSizePolicy.Minimum)
+        self.separator2.setLineWidth(2)
+
+        self.left_layout.addWidget(self.create_img_lbl)
+        self.left_layout.addWidget(self.create_project_btn)
+
+        self.right_layout.addWidget(self.import_img_lbl)
+        self.right_layout.addWidget(self.import_project_btn)
+
+        self.center_layout.addWidget(self.separator1)
+        self.center_layout.addWidget(self.center_lbl)
+        self.center_layout.addWidget(self.separator2)
+
+        self.main_layout.addLayout(self.left_layout)
+        self.main_layout.addLayout(self.center_layout)
+        self.main_layout.addLayout(self.right_layout)
+
+    def create_project(self):
+        self.browser.top_widget.new_project()
+        self.deleteLater()
+
+    def import_project(self):
+        self.browser.import_project()
+        self.deleteLater()
 
 class EZMPathEditor(QtWidgets.QDialog):
     def __init__(self, project=None):

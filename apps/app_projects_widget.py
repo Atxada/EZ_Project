@@ -3,7 +3,7 @@ from collections import OrderedDict
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from app_assets_widget import EZMAssetItem, EZMAssetStruct
-from app_extra_widget import EZMPathEditor
+from app_extra_widget import EZMGetStarted
 from app_history import *
 from util import *
 
@@ -30,20 +30,51 @@ class EZMProjectBrowser(QtWidgets.QWidget):
         # layout management
         self.main_layout = QtWidgets.QVBoxLayout(self)
 
+        # create widget containing container and hint first
+        self.project_widget = QtWidgets.QWidget()
+        self.project_layout = QtWidgets.QVBoxLayout(self.project_widget)
         self.project_container = custom_widget.InteractiveItemContainer()
+        self.import_guide = custom_widget.GraphicLabel(get_path('empty.png', icon=True),(144,144))
+        self.get_started_btn = QtWidgets.QPushButton('Get Started')
+        self.get_started_btn.setStyle(QtWidgets.QStyleFactory.create('Windows'))
+        self.get_started_btn.setStyleSheet('background-color:#1363bf')
+        self.get_started_btn.setIcon(QtGui.QIcon(QtGui.QPixmap(get_path('rocket.png',icon=True))))
+        self.get_started_btn.setIconSize(QtCore.QSize(24,24))
+        self.get_started_btn.clicked.connect(self.get_started)
+ 
+        # create hint widget to align it center (button has weird behaviour when maximum width is restricted it wont align middle)
+        self.hint_widget = QtWidgets.QWidget()
+        self.hint_layout = QtWidgets.QVBoxLayout(self.hint_widget)
+        self.hint_layout.addWidget(self.import_guide)
+        self.hint_layout.addWidget(self.get_started_btn)
+
+        self.project_layout.addWidget(self.project_container)
+        self.project_layout.addStretch()
+        self.project_layout.addWidget(self.hint_widget, alignment=QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.project_layout.addStretch()
+
         self.project_scroll = QtWidgets.QScrollArea()
         self.project_scroll.setWidgetResizable(True)
-        self.project_scroll.setWidget(self.project_container)
+        self.project_scroll.setWidget(self.project_widget)
         self.project_scroll.setSizePolicy(QtWidgets.QSizePolicy.Minimum,QtWidgets.QSizePolicy.Expanding)
 
         self.project_container.setSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
         self.main_layout.addWidget(self.project_scroll)
+
+    def show_hint(self, show=True):
+        self.import_guide.setVisible(show)
+        self.get_started_btn.setVisible(show)
+
+    def get_started(self):
+        self.get_started_dialog = EZMGetStarted(self)
+        self.get_started_dialog.show()
 
     def add_project(self, name, category, thumbnail, data_path):
         project = EZMProjectItem(self, self.project_container, name, category, os.path.dirname(data_path), thumbnail)
         with open(data_path, 'w+') as file:
             file.write(json.dumps(project.serialize(), indent=4))
         self.top_widget.project_paths[data_path] = project
+        self.show_hint(False)   # when project created successfully hide hint
 
     def add_missing_project(self, path, warning_text=None, incomplete=False):
         if not warning_text: warning_text = 'File not found '
@@ -173,6 +204,7 @@ class EZMProjectBrowser(QtWidgets.QWidget):
 
                             # assign to application project paths dict
                             self.top_widget.project_paths[path] = project
+                            self.show_hint(False)   # when one project loaded successfully, hide hint
 
                         except:  
                             self.add_missing_project(path, "Can't read file content")   # if json file is not valid throw error
@@ -391,7 +423,8 @@ class EZMProjectItem(custom_widget.InteractiveItem):
         self.browser.top_widget.open_project_settings(self)
 
     def open_path_editor(self, event):
-        self.path_editor = EZMPathEditor(self)
+        return
+        #self.path_editor = EZMPathEditor(self)
 
     def get_icon(self):
         if self._category == "Animation":

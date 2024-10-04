@@ -65,15 +65,22 @@ class EZMCalendarWidget(QtWidgets.QWidget):
         self.previous_btn = custom_widget.GraphicButton(get_path('left.png',icon=True),self.previous_page,QtGui.QColor('white'),1,(16,16))
         self.next_btn = custom_widget.GraphicButton(get_path('right.png',icon=True),self.next_page,QtGui.QColor('white'),1,(16,16))
 
+        self.detail_separator = QtWidgets.QFrame()
+        self.detail_separator.setFrameShape(QtWidgets.QFrame.HLine)
+        self.detail_separator.setSizePolicy(QtWidgets.QSizePolicy.Minimum,QtWidgets.QSizePolicy.Minimum)
+        self.detail_separator.setLineWidth(1)
+
         self.detail_tab = EZMDateDetail(self)
 
         self.header_layout.addWidget(self.month_lbl)
         self.header_layout.addWidget(self.previous_btn)
-        self.header_layout.addSpacing(10)
+        self.header_layout.addSpacing(15)
         self.header_layout.addWidget(self.next_btn)
 
         self.main_layout.addLayout(self.header_layout)
+        self.main_layout.addSpacing(10)
         self.main_layout.addLayout(self.calendar_grid_layout)
+        self.main_layout.addWidget(self.detail_separator)
         self.main_layout.addWidget(self.detail_tab)
 
     def load_date(self):
@@ -315,7 +322,7 @@ class EZMDateWidget(QtWidgets.QFrame):
         self.initUI()
 
     def initUI(self):
-        self.setFixedSize(50,50)
+        self.setFixedSize(40,40)
         #self.setStyleSheet('EZMDateWidget#dateFrame{border: 1px solid #101010}')   # default style when loaded
         self.main_layout = QtWidgets.QVBoxLayout(self)
         self.date_lbl = QtWidgets.QLabel(self.date.strftime("%#d"))
