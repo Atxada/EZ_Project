@@ -1,4 +1,4 @@
-Node Editor 
+EZ Project
 ==========================
 .. image:: https://github.com/Atxada/Node_Editor/blob/main/docs/Node%20Editor%20UI.PNG
 Description
