@@ -17,7 +17,7 @@ class EZMWindow(QtWidgets.QMainWindow):
         self.main_widget = EZMToolbar(self)
         self.setCentralWidget(self.main_widget)
 
-        self.setWindowTitle("Eazy Workflow v0.1")
+        self.setWindowTitle("Eazy Workflow v1.0")
         path = get_path("add.png", icon=True)
         self.setWindowIcon(QtGui.QIcon(path))
         self.statusBar().showMessage("(Offline) User: -")
