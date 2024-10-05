@@ -1,8 +1,8 @@
-EZ Project
-==========================
-.. image:: https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG
+### EZ Project
+<hr/>
+![EZ Project UI](https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG)
 Description
------------
+<hr/>
 
 EZ Project is a small application designed to simplify project management exclusive to autodesk maya. The philosophy of this application is to design asset navigation as intuitive as possible, so finding the file is much easier without the needs to fiddle around with complicated folder structure. Currently it's only suppport asset file like maya ASCII (.ma), maya Binary (.mb) and FBX (.fbx) file format. 
 
