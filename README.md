@@ -11,7 +11,7 @@ EZ Project is a small application designed to simplify project management exclus
 
 ## Features
 ---
-- customizable project and asset
+- ### customizable project and asset
 ![1 asset project customization](https://github.com/user-attachments/assets/d8eb3538-f207-4434-aab2-2ca04853eb1f)
 
 - easy asset navigation
