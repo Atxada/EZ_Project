@@ -15,7 +15,7 @@ EZ Project is a small application designed to simplify project management exclus
 - easy asset navigation
 including 3 basics asset group (character asset, prop asset, sets asset), search the asset, sort the asset
 - submit asset or change asset status
--set deadline of the asset
+- set deadline of the asset
 one of my favourite features about this application, go to the asset by priority, so user can go straight to the assignment that day
 - easy process to transfer project data to other user
 - (experimental) take a screenshot
