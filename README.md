@@ -1,6 +1,6 @@
 # EZ Project
 </hr>
-![Project_Menu_UI](https://github.com/user-attachments/assets/4191e7ea-86f8-43c7-b980-12cde44ec9b0)
+![Project_Menu_UI](/docs/Project_Menu_UI.png)
 </hr>
 
 ## Description
