@@ -28,6 +28,13 @@ one of my favourite features about this application, go to the asset by priority
    Notes can have more than one paragraph. Successive paragraphs must
    indent to the same level as the rest of the note.
 
+.. warning::
+    This is warning text. Use a warning for information the user must
+    understand to avoid negative consequences.
+
+    Warnings are formatted in the same way as notes. In the same way,
+    lines must be broken and indented under the warning tag.
+
 .. note::
    Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
 
