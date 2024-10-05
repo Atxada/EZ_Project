@@ -1,6 +1,6 @@
 ### EZ Project
 <hr/>
-[![EZ Project UI](https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG)]
+![EZ Project UI](https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG?raw=true)
 
 Description
 <hr/>
