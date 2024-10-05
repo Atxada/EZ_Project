@@ -1,4 +1,4 @@
-### EZ Project
+# EZ Project
 </hr>
 .. image:: https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG
 ## Description
@@ -21,5 +21,5 @@ one of my favourite features about this application, go to the asset by priority
 > Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
 
 > [!IMPORTANT]  
-> This project is not intended to be commercial or studio use, it's only a part of my personal project.
-> I do not own any images shown in the application demo, all rights belong to it's rightful artists. no copyright infringement intended.
+> - This project is not intended to be commercial or studio use, it's only a part of my personal project.
+> - I do not own any images shown in the application demo, all rights belong to it's rightful artists. no copyright infringement intended.
