@@ -17,8 +17,8 @@ one of my favourite features about this application, go to the asset by priority
 -(experimental) take a screenshot
 -(experimental) automated file version control
 
-Note:
-Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
+.. note::
+   Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
 
 Disclaimer: 
 -This project is not intended to be commercial or studio use, it's only a part of my personal project.
