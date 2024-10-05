@@ -1,7 +1,7 @@
 # EZ Project
-</hr>
-![Project_Menu_UI](docs/Project_Menu_UI.PNG)
-</hr>
+
+![Project_Menu_UI](/docs/Project_Menu_UI.PNG)
+
 
 ## Description
 
