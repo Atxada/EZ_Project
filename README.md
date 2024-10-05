@@ -1,6 +1,6 @@
 # EZ Project
 </hr>
-![Project_Menu_UI](/docs/Project_Menu_UI.png)
+![Project_Menu_UI](/docs/Project_Menu_UI.PNG)
 </hr>
 
 ## Description
