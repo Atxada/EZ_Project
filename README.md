@@ -19,17 +19,17 @@ I might or might not update this application in the future, even though this app
 ## Features
 ---
 - ### Customizable project and asset
-  ![1 project asset customization](https://github.com/user-attachments/assets/05e24a2a-7eaa-4a8e-b42a-05af0f433713)
+  ![1 project asset customization](https://github.com/user-attachments/assets/627d7f5f-bd96-4f46-a70a-cc8831570537)
 
     > Differentiate between projects and assets with unique names, categories, and icons.
 
 - ### Intuitive UI navigation
-  ![2 intuitive UI navigation](https://github.com/user-attachments/assets/8f945b54-db8b-4f91-825a-ee19c67b0d02)
+  ![2 intuitive UI navigation](https://github.com/user-attachments/assets/56534240-5089-4754-a10a-8041fbb8ad43)
 
     > With a deliberate design to keep menus simple and uncluttered, browsing assets is much more efficient.
 
 - ### Assign and monitor deadline
-  ![3 assign and monitor deadline](https://github.com/user-attachments/assets/2e3be755-3db3-4036-910c-06984dedcca1)
+  ![3 assign and monitor deadline](https://github.com/user-attachments/assets/132a9c27-ccb6-408f-8308-37deb11256f5)
 
     > Set a deadline for specific assets, allowing users to see all assignments corresponding to the assigned date.
     > Calendar editor will show 3 colors depending on the active assignment or active todo: orange (active assignment), blue (active todo), and green (finished assignment or todo). 
