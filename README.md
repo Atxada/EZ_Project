@@ -52,4 +52,4 @@ I might or might not update this application in the future, even though this app
 
 > [!IMPORTANT]  
 > - This project is not intended to be commercial or studio use, it's only a part of my personal project.
-> - I do not own any images shown in the application demo, all rights belong to it's rightful artists. no copyright infringement intended.
+> - I do not own any images shown in the application demo, all rights belong to its rightful artists. No copyright infringement intended.
