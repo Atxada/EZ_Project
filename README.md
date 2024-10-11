@@ -51,5 +51,5 @@ I might or might not update this application in the future, even though this app
 > Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
 
 > [!IMPORTANT]  
-> - This project is not intended to be commercial or studio use, it's only a part of my personal project.
+> - This project is not intended for commercial or studio use, it's only a part of my personal project.
 > - I do not own any images shown in the application demo, all rights belong to its rightful artists. No copyright infringement intended.
