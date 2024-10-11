@@ -25,11 +25,12 @@ I might or might not update this application in the future, even though this app
 
 - ### Intuitive UI navigation
 
-    With a deliberate design to keep menus simple and uncluttered, browsing assets is much mor efficient.
+    With a deliberate design to keep menus simple and uncluttered, browsing assets is much more efficient.
 
 - ### Assign and monitor deadline
 
-    Set a deadline for specific assets, allowing users to see all assignments corresponding to the assigned date. 
+    Set a deadline for specific assets, allowing users to see all assignments corresponding to the assigned date.
+    Calendar editor will show 3 colors depending on the active assignment or active todo: orange (active assignment), blue (active todo), and green (finished assignment or todo). 
     Asset has 3 statuses: unchecked, checked and verified. If an asset is verified, the assignment is considered done.
 
 - ### Transfer project across all users
@@ -41,6 +42,8 @@ I might or might not update this application in the future, even though this app
 - ### (experimental) Automated file version control
 
     Updating new asset versions will automatically manage the older version in File Explorer.
+
+- ### And many more useful features!
 
 ---
 
