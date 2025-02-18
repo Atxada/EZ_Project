@@ -55,3 +55,6 @@ I might or might not update this application in the future, even though this app
 > [!IMPORTANT]  
 > - This project is not intended for commercial or studio use, it's only a part of my personal project.
 > - I do not own any images shown in the application showcase, all rights belong to its rightful artists. No copyright infringement intended.
+
+> [!TIP]
+> Visit the Python package here: https://pypi.org/project/EZ-Manage-Tool/
