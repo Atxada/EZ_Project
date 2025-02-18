@@ -1,7 +1,7 @@
 # EZ Project
 ---
 
-![Project_Menu_UI](/docs/Project_Menu_UI.PNG)
+![Project_Menu_UI](https://github.com/Atxada/EZ_Project/blob/main/docs/Project_Menu_UI.PNG?raw=true)
 > **Project menu UI**
 
 ![Asset_Browser_UI](/docs/Asset_Browser_UI.PNG)
