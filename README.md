@@ -49,12 +49,12 @@ I might or might not update this application in the future, even though this app
 
 ---
 
+> [!TIP]
+> Visit the Python package here: https://pypi.org/project/EZ-Manage-Tool/
+
 > [!NOTE]  
 > Tested in Windows 10 22H2, Python 3.12.1 and Qt 6.7.1 (might not work with other OS)
 
 > [!IMPORTANT]  
 > - This project is not intended for commercial or studio use, it's only a part of my personal project.
 > - I do not own any images shown in the application showcase, all rights belong to its rightful artists. No copyright infringement intended.
-
-> [!TIP]
-> Visit the Python package here: https://pypi.org/project/EZ-Manage-Tool/
